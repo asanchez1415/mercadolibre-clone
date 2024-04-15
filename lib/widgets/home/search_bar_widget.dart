@@ -12,6 +12,7 @@ class SearchBarWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
+            margin: const EdgeInsets.only(right: 10),
             width: 350,
             height: 35,
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),

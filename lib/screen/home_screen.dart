@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mercadolibre_clone/constants/colors.dart';
+import 'package:mercadolibre_clone/widgets/home/recommended_widget.dart';
+import 'package:mercadolibre_clone/widgets/home/secondary_banner_widget.dart';
 // Import widgets
 import '../widgets/home/home.dart';
 
@@ -14,12 +16,18 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedTab = 0;
 
   final List _pages = [
-    const Column(
-      children: [
-        SearchBarWidget(),
-        LocationRowWidget(),
-        BannerWidget(),
-      ],
+    // Homepage
+    const SingleChildScrollView(
+      child: Column(
+        children: [
+          SearchBarWidget(),
+          LocationRowWidget(),
+          BannerWidget(),
+          CategoriesWidget(),
+          SecondaryBannerWidget(),
+          RecommendedWidget(),
+        ],
+      ),
     ),
     const Center(
       child: Text("Favoritos"),
@@ -44,6 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(0),
         child: AppBar(

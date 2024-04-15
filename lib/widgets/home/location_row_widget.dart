@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:mercadolibre_clone/constants/colors.dart';
+import 'package:mercadolibre_clone/constants/constants.dart';
 
 class LocationRowWidget extends StatelessWidget {
   const LocationRowWidget({super.key});
   @override
   Widget build(BuildContext context) {
-    final sizeScreen = MediaQuery.of(context).size;
-
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 18),
       color: mlbYellow,
       height: 30,
-      width: sizeScreen.width,
+      width: sizeScreen(context).width,
       child: const Row(children: [
         Icon(
           Icons.place_outlined,
