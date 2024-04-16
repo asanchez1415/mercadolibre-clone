@@ -58,53 +58,57 @@ class CardProductHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(right: 10),
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, 'product'),
       child: Container(
-        width: 170,
-        height: 210,
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          color: Colors.white,
-        ),
-        child: Column(children: [
-          Container(
-            margin: const EdgeInsets.only(top: 10),
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              textFirst,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
-            ),
+        margin: const EdgeInsets.only(right: 10),
+        child: Container(
+          width: 170,
+          height: 210,
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            color: Colors.white,
           ),
-          Container(
-            margin: const EdgeInsets.only(top: 20),
-            child: ClipRRect(
-              child: Image.network(
-                urlImage,
-                width: 120,
-                height: 80,
+          child: Column(children: [
+            Container(
+              margin: const EdgeInsets.only(top: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                textFirst,
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
               ),
             ),
-          ),
-          Container(
-            margin: const EdgeInsets.only(top: 20),
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              title,
-              style: const TextStyle(color: mlbUnSelectedGrey),
+            Container(
+              margin: const EdgeInsets.only(top: 20),
+              child: ClipRRect(
+                child: Image.network(
+                  urlImage,
+                  width: 120,
+                  height: 80,
+                ),
+              ),
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              price,
-              style: const TextStyle(fontWeight: FontWeight.w600),
+            Container(
+              margin: const EdgeInsets.only(top: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                title,
+                style: const TextStyle(color: mlbUnSelectedGrey),
+              ),
             ),
-          )
-        ]),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                price,
+                style: const TextStyle(fontWeight: FontWeight.w600),
+              ),
+            )
+          ]),
+        ),
       ),
     );
   }
