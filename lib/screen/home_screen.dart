@@ -29,9 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     ),
     const FavoritesScreen(),
-    const Center(
-      child: Text("Mis compras"),
-    ),
+    const MyShoppingScreen(),
     const Center(
       child: Text("Notificaciones"),
     ),
