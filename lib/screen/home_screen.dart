@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mercadolibre_clone/constants/colors.dart';
-import 'package:mercadolibre_clone/widgets/home/recommended_widget.dart';
-import 'package:mercadolibre_clone/widgets/home/secondary_banner_widget.dart';
+import 'package:mercadolibre_clone/screen/screen.dart';
 // Import widgets
 import '../widgets/home/home.dart';
 
@@ -29,9 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
     ),
-    const Center(
-      child: Text("Favoritos"),
-    ),
+    const FavoritesScreen(),
     const Center(
       child: Text("Mis compras"),
     ),
